@@ -2,12 +2,15 @@ package com.mjtammik.wellness
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.unit.dp
 
 enum class Option (val value: Int) {
     Option0(0),
@@ -33,6 +36,7 @@ fun RadioButtonSelection(
     Column(modifier = modifier) {
         Text(
             text = text,
+            modifier = Modifier.padding(top = 6.dp),
             style = MaterialTheme.typography.bodyMedium
         )
 
@@ -41,7 +45,9 @@ fun RadioButtonSelection(
             options.forEach { option ->
                 if(option in min..max) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        var mod = Modifier.scale(.7f, .7f)
                         RadioButton(
+                            modifier = mod,
                             selected = selected == option,
                             // Invoke the callback
                             onClick = { onOptionSelected(option) }

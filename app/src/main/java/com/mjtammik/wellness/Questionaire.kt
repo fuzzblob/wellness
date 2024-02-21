@@ -10,7 +10,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -29,32 +28,26 @@ fun QuestionaireContent(modifier: Modifier = Modifier){
 fun PHQ4(modifier: Modifier = Modifier) {
     // Title
     Text(
-        text = "Mood (PHQ-4)",
+        text = stringResource(id = R.string.q1_title),
         modifier = modifier,
         style = MaterialTheme.typography.headlineLarge
     )
     // Long name
     Text(
-        text = "The Patient Health Questionnaire-4 (PHQ-4), " +
-            "developed by Kurt Kroenke, Robert L Spitzer, " +
-            "Janet B W Williams, and Bernd Löwe.",
+        text = stringResource(id = R.string.q1_sub_title),
         modifier = modifier,
         style = MaterialTheme.typography.labelLarge
     )
     // Scoring
     Text(
-        text = "0. Not at all\n" +
-                "1. Several days\n" +
-                "2. More than half the days\n" +
-                "3. Nearly every day",
-        modifier = modifier,
+        text = stringResource(id = R.string.q1_scoring),
+        modifier = Modifier.padding(12.dp),
         style = MaterialTheme.typography.bodyLarge
     )
 
     var answer1 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = "Over the last 2 weeks, how often have you been bothered by " +
-                "feeling nervous, anxious or on edge?",
+        text = stringResource(id = R.string.q1_p01),
         selected = answer1,
         min = Option.Option0,
         max = Option.Option3,
@@ -62,8 +55,7 @@ fun PHQ4(modifier: Modifier = Modifier) {
     )
     var answer2 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = "Over the last 2 weeks, how often have you been bothered by " +
-                "not being able to stop or control worrying?",
+        text = stringResource(id = R.string.q1_p02),
         selected = answer2,
         min = Option.Option0,
         max = Option.Option3,
@@ -71,8 +63,7 @@ fun PHQ4(modifier: Modifier = Modifier) {
     )
     var answer3 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = "Over the last 2 weeks, how often have you been bothered by " +
-                "little interest or pleasure in doing things?",
+        text = stringResource(id = R.string.q1_p03),
         selected = answer3,
         min = Option.Option0,
         max = Option.Option3,
@@ -80,8 +71,7 @@ fun PHQ4(modifier: Modifier = Modifier) {
     )
     var answer4 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = "Over the last 2 weeks, how often have you been bothered by " +
-                "feeling down, depressed, or hopeless?",
+        text = stringResource(id = R.string.q1_p04),
         selected = answer4,
         min = Option.Option0,
         max = Option.Option3,
@@ -139,13 +129,13 @@ fun WEMWBS(modifier: Modifier = Modifier) {
                 "4. Often\n" +
                 "5. All of the time"
         ,
-        modifier = modifier,
+        modifier = Modifier.padding(12.dp),
         style = MaterialTheme.typography.bodyLarge
     )
 
     var p01 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p01),
+        text = stringResource(id = R.string.q2_p01),
         selected = p01,
         min = Option.Option1,
         max = Option.Option5,
@@ -153,7 +143,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p02 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p02),
+        text = stringResource(id = R.string.q2_p02),
         selected = p02,
         min = Option.Option1,
         max = Option.Option5,
@@ -161,7 +151,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p03 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p03),
+        text = stringResource(id = R.string.q2_p03),
         selected = p03,
         min = Option.Option1,
         max = Option.Option5,
@@ -169,7 +159,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p04 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p04),
+        text = stringResource(id = R.string.q2_p04),
         selected = p04,
         min = Option.Option1,
         max = Option.Option5,
@@ -177,7 +167,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p05 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p05),
+        text = stringResource(id = R.string.q2_p05),
         selected = p05,
         min = Option.Option1,
         max = Option.Option5,
@@ -185,7 +175,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p06 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p06),
+        text = stringResource(id = R.string.q2_p06),
         selected = p06,
         min = Option.Option1,
         max = Option.Option5,
@@ -193,7 +183,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p07 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p07),
+        text = stringResource(id = R.string.q2_p07),
         selected = p07,
         min = Option.Option1,
         max = Option.Option5,
@@ -201,7 +191,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p08 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p08),
+        text = stringResource(id = R.string.q2_p08),
         selected = p08,
         min = Option.Option1,
         max = Option.Option5,
@@ -209,7 +199,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p09 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p09),
+        text = stringResource(id = R.string.q2_p09),
         selected = p09,
         min = Option.Option1,
         max = Option.Option5,
@@ -217,7 +207,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p10 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p10),
+        text = stringResource(id = R.string.q2_p10),
         selected = p10,
         min = Option.Option1,
         max = Option.Option5,
@@ -225,7 +215,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p11 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p11),
+        text = stringResource(id = R.string.q2_p11),
         selected = p11,
         min = Option.Option1,
         max = Option.Option5,
@@ -233,7 +223,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p12 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p12),
+        text = stringResource(id = R.string.q2_p12),
         selected = p12,
         min = Option.Option1,
         max = Option.Option5,
@@ -241,7 +231,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p13 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p13),
+        text = stringResource(id = R.string.q2_p13),
         selected = p13,
         min = Option.Option1,
         max = Option.Option5,
@@ -249,7 +239,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
     )
     var p14 by remember { mutableStateOf(Option.Option0) }
     RadioButtonSelection(
-        text = stringResource(id = R.string.q1_p14),
+        text = stringResource(id = R.string.q2_p14),
         selected = p14,
         min = Option.Option1,
         max = Option.Option5,
@@ -294,7 +284,7 @@ fun WSAS(modifier: Modifier = Modifier) {
     Text(
         text = "Rate each of the following questions on a 0 to 8 scale: " +
                 "0 indicates no impairment at all and 8 indicates very severe impairment.",
-        modifier = modifier,
+        modifier = Modifier.padding(12.dp),
         style = MaterialTheme.typography.bodyLarge
     )
 
