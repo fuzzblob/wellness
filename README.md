@@ -18,7 +18,8 @@ Their response:
 
 based on *"The Patient Health Questionnaire-4 (PHQ-4), developed by Kurt Kroenke, Robert L Spitzer, Janet B W Williams, and Bernd Löwe."*
 
-    PHQ-4 score = 12-(Mood score/100)*12
+    PHQ-4 score = 12 - (Mood score / 100) * 12
+    Mood = (1 - (PHQ-4 / 12)) * 100
 
 Example for a mood score of 68:
 
@@ -65,6 +66,7 @@ based on *"The Warwick-Edinburgh Mental Well-being Scale (WEMWBS), developed by 
 Wellbeing: (the original scale is out of 70, however the lowest score possible is 14 so the range is 56)
 
     WEMWBS score = 14 + (Wellbeing score / 100) * 56
+    Wellbeing score = ((WEMWBS score - 14) / 56) * 100
 
 Higher scores indicate greater wellbeing.
 
@@ -102,6 +104,7 @@ Prompts:
 based on *"The Work and Social Adjustment Scale (WSAS), developed by James C Mundt, Isaac M Marks, M Katherine Shear, and John H Greist."*
 
     WSAS score = 40 - (Functioning score / 100) * 40
+    Functioning score = (1 - (WSAS score / 40)) * 100
 
 Lower scores indicate lower impairment.
 
