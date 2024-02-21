@@ -15,4 +15,10 @@
     <string name="q1_p12">I\'ve been feeling loved</string>
     <string name="q1_p13">I\'ve been interested in new things</string>
     <string name="q1_p14">I\'ve been feeling cheerful</string>
+
+    <string name="q3_p01">Because of my [disorder], my ability to work is impaired.</string>
+    <string name="q3_p02">Because of my [disorder], my home management (cleaning, tidying, shopping, cooking, looking after home or children, paying bills) is impaired.</string>
+    <string name="q3_p03">Because of my [disorder], my social leisure activities (with other people, such as parties, bars, clubs, outings, visits, dating, home entertainment) are impaired.</string>
+    <string name="q3_p04">Because of my [disorder], my private leisure activities (done alone, such as reading, gardening, collecting, sewing, walking alone) are impaired.</string>
+    <string name="q3_p05">Because of my [disorder], my ability to form and maintain close relationships with others, including those I live with, is impaired.</string>
 </resources>

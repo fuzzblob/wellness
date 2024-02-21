@@ -21,6 +21,7 @@ fun QuestionaireContent(modifier: Modifier = Modifier){
     Column {
         PHQ4(modifier = modifier)
         WEMWBS(modifier = modifier)
+        WSAS(modifier = modifier)
     }
 }
 
@@ -273,6 +274,97 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         modifier = modifier
     )
 }
+
+@Composable
+fun WSAS(modifier: Modifier = Modifier) {
+    // Title
+    Text(
+        text = "Functioning (WSAS)",
+        modifier = modifier,
+        style = MaterialTheme.typography.headlineLarge
+    )
+    // Long name
+    Text(
+        text = "The Work and Social Adjustment Scale (WSAS), developed by " +
+                "James C Mundt, Isaac M Marks, M Katherine Shear, and John H Greist.",
+        modifier = modifier,
+        style = MaterialTheme.typography.labelLarge
+    )
+    // Scoring
+    Text(
+        text = "Rate each of the following questions on a 0 to 8 scale: " +
+                "0 indicates no impairment at all and 8 indicates very severe impairment.",
+        modifier = modifier,
+        style = MaterialTheme.typography.bodyLarge
+    )
+
+    var answer1 by remember { mutableStateOf(Option.Option0) }
+    RadioButtonSelection(
+        text = stringResource(id = R.string.q3_p01),
+        selected = answer1,
+        min = Option.Option0,
+        max = Option.Option8,
+        onOptionSelected = {option -> answer1 = option}
+    )
+    var answer2 by remember { mutableStateOf(Option.Option0) }
+    RadioButtonSelection(
+        text = stringResource(id = R.string.q3_p02),
+        selected = answer2,
+        min = Option.Option0,
+        max = Option.Option8,
+        onOptionSelected = {option -> answer2 = option}
+    )
+    var answer3 by remember { mutableStateOf(Option.Option0) }
+    RadioButtonSelection(
+        text = stringResource(id = R.string.q3_p03),
+        selected = answer3,
+        min = Option.Option0,
+        max = Option.Option8,
+        onOptionSelected = {option -> answer3 = option}
+    )
+    var answer4 by remember { mutableStateOf(Option.Option0) }
+    RadioButtonSelection(
+        text = stringResource(id = R.string.q3_p04),
+        selected = answer4,
+        min = Option.Option0,
+        max = Option.Option8,
+        onOptionSelected = {option -> answer4 = option}
+    )
+    var answer5 by remember { mutableStateOf(Option.Option0) }
+    RadioButtonSelection(
+        text = stringResource(id = R.string.q3_p05),
+        selected = answer5,
+        min = Option.Option0,
+        max = Option.Option8,
+        onOptionSelected = {option -> answer5 = option}
+    )
+
+    val result: Int = answer1.ordinal + answer2.ordinal +
+            answer3.ordinal + answer4.ordinal + answer5.ordinal
+    val normalized: Float = (1f - (result / 40f)) * 100f
+    ResultText(text = "Resulting value is",
+        appendix = "(WSAS)",
+        result = result,
+        modifier = modifier
+    )
+    ResultText(text = "Normalized value is",
+        appendix = "(Functioning)",
+        result = normalized.toInt(),
+        modifier = modifier
+    )
+
+    // TODO: add some context
+
+    // None 0-2
+    // Mild 3-5
+    // Moderate 6-8
+    // Severe 9-12
+
+    // Anxiety subscale = sum of items 1 and 2 (score range, 0 to 6)
+    // Depression subscale = sum of items 3 and 4 (score range, 0 to 6)
+    // On each subscale, a score of 3 or greater is considered positive for screening purposes
+}
+
 
 @Composable
 fun ResultText(text: String, result: Int, modifier: Modifier = Modifier, appendix: String = "") {
