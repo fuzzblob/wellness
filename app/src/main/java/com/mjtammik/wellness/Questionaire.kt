@@ -133,7 +133,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         style = MaterialTheme.typography.bodyLarge
     )
 
-    var p01 by remember { mutableStateOf(Option.Option0) }
+    var p01 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p01),
         selected = p01,
@@ -141,7 +141,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p01 = option}
     )
-    var p02 by remember { mutableStateOf(Option.Option0) }
+    var p02 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p02),
         selected = p02,
@@ -149,7 +149,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p02 = option}
     )
-    var p03 by remember { mutableStateOf(Option.Option0) }
+    var p03 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p03),
         selected = p03,
@@ -157,7 +157,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p03 = option}
     )
-    var p04 by remember { mutableStateOf(Option.Option0) }
+    var p04 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p04),
         selected = p04,
@@ -165,7 +165,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p04 = option}
     )
-    var p05 by remember { mutableStateOf(Option.Option0) }
+    var p05 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p05),
         selected = p05,
@@ -173,7 +173,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p05 = option}
     )
-    var p06 by remember { mutableStateOf(Option.Option0) }
+    var p06 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p06),
         selected = p06,
@@ -181,7 +181,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p06 = option}
     )
-    var p07 by remember { mutableStateOf(Option.Option0) }
+    var p07 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p07),
         selected = p07,
@@ -189,7 +189,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p07 = option}
     )
-    var p08 by remember { mutableStateOf(Option.Option0) }
+    var p08 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p08),
         selected = p08,
@@ -197,7 +197,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p08 = option}
     )
-    var p09 by remember { mutableStateOf(Option.Option0) }
+    var p09 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p09),
         selected = p09,
@@ -205,7 +205,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p09 = option}
     )
-    var p10 by remember { mutableStateOf(Option.Option0) }
+    var p10 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p10),
         selected = p10,
@@ -213,7 +213,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p10 = option}
     )
-    var p11 by remember { mutableStateOf(Option.Option0) }
+    var p11 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p11),
         selected = p11,
@@ -221,7 +221,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p11 = option}
     )
-    var p12 by remember { mutableStateOf(Option.Option0) }
+    var p12 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p12),
         selected = p12,
@@ -229,7 +229,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p12 = option}
     )
-    var p13 by remember { mutableStateOf(Option.Option0) }
+    var p13 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p13),
         selected = p13,
@@ -237,7 +237,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         max = Option.Option5,
         onOptionSelected = {option -> p13 = option}
     )
-    var p14 by remember { mutableStateOf(Option.Option0) }
+    var p14 by remember { mutableStateOf(Option.Option1) }
     RadioButtonSelection(
         text = stringResource(id = R.string.q2_p14),
         selected = p14,
@@ -252,7 +252,7 @@ fun WEMWBS(modifier: Modifier = Modifier) {
         + p08.ordinal + p09.ordinal + p10.ordinal + p11.ordinal
         + p12.ordinal + p13.ordinal + p14.ordinal
             )
-    val normalized: Float = (1f - (result / 40f)) * 100f
+    val normalized: Float = ((result - 14f) / 56f) * 100f
     ResultText(text = "Resulting value is",
         appendix = "(WEMWBS)",
         result = result,
