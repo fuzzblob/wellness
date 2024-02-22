@@ -1,10 +1,28 @@
 # wellness
 
+A simple self evaluation tool to gauge mental health & wellbeing. It normalizes the different scale ranges from the various questionnaires to a range of 0 to 100 for ease of tracking as well as compatibility (see [motivation](https://github.com/fuzzblob/wellness/edit/main/README.md#motivation))
+
+### features
+
+- implement all three questionnaires used by the PocketWell app
+  - [Mood / PHQ-4](https://github.com/fuzzblob/wellness/edit/main/README.md#Mood)
+  - [Wellbeing / WEMWBS](https://github.com/fuzzblob/wellness/edit/main/README.md#Wellbeing)
+  - [Functioning / WSAS](https://github.com/fuzzblob/wellness/edit/main/README.md#Functioning)
+- convert their scales to a 0-100 range for compatibility with PocketWell data and to make them easily graphable
+
+### Screenshots
+
+<p align="center">
+	<img src="https://github.com/fuzzblob/wellness/assets/13321200/1cee610f-3e82-4a6e-bbcf-ba51161b9251" width="200px" />
+</p>
+
+# motivation
+
 This repository is intended to host an app for evaluating mood, wellbeing and fuctioning as described by methods mentioned in the scale conversion section. It is borrowing ideas from a proprietary app called PocketWell which is tied to a webservice called [Wellness Together Canada](https://www.wellnesstogether.ca/en-ca/). From their website: "[WTC] was created in response to a rise in mental health and substance use concerns since the COVID-19 pandemic. It is funded by the Government of Canada."
 
-In early 2024 WTC [announced it was going to shut down it's services](https://www.wellnesstogether.ca/en-ca/wtc-closure-information). As I personally found it useful to track my mood and functioning and wanted continuity with the rest of my tracked data (logget in Track & Graph on Android) I decided to implement a simple replacement app.
+In early 2024 WTC [announced it was going to shut down it's services](https://www.wellnesstogether.ca/en-ca/wtc-closure-information). As I personally found it useful to track my mood and functioning and wanted continuity with the rest of my tracked data (logget in [Track & Graph]() on Android) I decided to implement a simple replacement app.
 
-## Scale Conversions
+### Scale Conversions
 
 I contacted the the website and asked a few clarifying questions about what science the tracking was based on, and as a followup question how they converted the particular number to a 0-100 scale (as the original reearch used non-unified scales): "[...] I am interested in how the various scales are adjusted from the respective values [(PHQ4 12, WEMWBS 70 and WSAS 40)] to the [unified] scale of 0-100."
 
@@ -14,7 +32,7 @@ Their response:
 > 
 > In the formulae below, Mood, Functioning, and Wellbeing scores are the results on the 0-100 scale as presented on the Wellness Together Canada or PocketWell dashboards. I've given an example for Mood, but the others would be calculated similarly."
 
-### Mood:
+# Mood:
 
 based on *"The Patient Health Questionnaire-4 (PHQ-4), developed by Kurt Kroenke, Robert L Spitzer, Janet B W Williams, and Bernd Löwe."*
 
@@ -59,7 +77,7 @@ Anxiety subscale = sum of items 1 and 2 (score range, 0 to 6)
 Depression subscale = sum of items 3 and 4 (score range, 0 to 6)
 On each subscale, a score of 3 or greater is considered positive for screening purposes
 
-## Wellbeing
+# Wellbeing
 
 based on *"The Warwick-Edinburgh Mental Well-being Scale (WEMWBS), developed by Ruth Tennant, Louise Hiller, Ruth Fishwick, Stephen Platt, Stephen Joseph, Scott Weich, Jane Parkinson, Jenny Secker, and Sarah Stewart-Brown."*
 
@@ -99,7 +117,7 @@ Prompts:
 - I've been interested in new things
 - I've been feeling cheerful
 
-### Functioning:
+# Functioning:
 
 based on *"The Work and Social Adjustment Scale (WSAS), developed by James C Mundt, Isaac M Marks, M Katherine Shear, and John H Greist."*
 
@@ -108,7 +126,7 @@ based on *"The Work and Social Adjustment Scale (WSAS), developed by James C Mun
 
 Lower scores indicate lower impairment.
 
-#### Work and Social Adjustment Scale
+### Work and Social Adjustment Scale
 
 Rate each of the following questions on a 0 to 8 scale: 0 indicates no impairment at all and 8 indicates very severe impairment.
 
