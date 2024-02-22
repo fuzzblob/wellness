@@ -1,13 +1,13 @@
 # wellness
 
-A simple self evaluation tool to gauge mental health & wellbeing. It normalizes the different scale ranges from the various questionnaires to a range of 0 to 100 for ease of tracking as well as compatibility (see [motivation](https://github.com/fuzzblob/wellness/edit/main/README.md#motivation))
+A simple self evaluation tool to gauge mental health & wellbeing. It normalizes the different scale ranges from the various questionnaires to a range of 0 to 100 for ease of tracking as well as compatibility (see motivation)
 
 ### features
 
 - implement all three questionnaires used by the PocketWell app
-  - [Mood / PHQ-4](https://github.com/fuzzblob/wellness/edit/main/README.md#Mood)
-  - [Wellbeing / WEMWBS](https://github.com/fuzzblob/wellness/edit/main/README.md#Wellbeing)
-  - [Functioning / WSAS](https://github.com/fuzzblob/wellness/edit/main/README.md#Functioning)
+  - Mood / PHQ-4
+  - Wellbeing / WEMWBS
+  - Functioning / WSAS
 - convert their scales to a 0-100 range for compatibility with PocketWell data and to make them easily graphable
 
 ### Screenshots
@@ -20,7 +20,7 @@ A simple self evaluation tool to gauge mental health & wellbeing. It normalizes 
 
 This repository is intended to host an app for evaluating mood, wellbeing and fuctioning as described by methods mentioned in the scale conversion section. It is borrowing ideas from a proprietary app called PocketWell which is tied to a webservice called [Wellness Together Canada](https://www.wellnesstogether.ca/en-ca/). From their website: "[WTC] was created in response to a rise in mental health and substance use concerns since the COVID-19 pandemic. It is funded by the Government of Canada."
 
-In early 2024 WTC [announced it was going to shut down it's services](https://www.wellnesstogether.ca/en-ca/wtc-closure-information). As I personally found it useful to track my mood and functioning and wanted continuity with the rest of my tracked data (logget in [Track & Graph]() on Android) I decided to implement a simple replacement app.
+In early 2024 WTC [announced it was going to shut down it's services](https://www.wellnesstogether.ca/en-ca/wtc-closure-information). As I personally found it useful to track my mood and functioning and wanted continuity with the rest of my tracked data (logget in [Track & Graph](https://github.com/SamAmco/track-and-graph) on Android) I decided to implement a simple replacement app.
 
 ### Scale Conversions
 
